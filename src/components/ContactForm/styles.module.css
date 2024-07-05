@@ -1,0 +1,72 @@
+.container_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: auto;
+}
+
+
+.wrapper_input {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.5rem;
+
+}
+
+.input_label {
+    font-size: var(--font-base-size);
+}
+
+.contact_input {
+    border-radius: var(--border-radius);
+    border: 1px solid black;
+}
+
+.contact_text_input {
+    border: 1px solid black;
+    border-radius: var(--border-radius);
+    height: 120px;
+    width: 200px;
+
+}
+
+.error_container {
+    position: absolute;
+    right: -30px;
+    display: flex;
+    align-items: center;
+}
+
+.error {
+    position: absolute;
+    text-transform: capitalize;
+    padding: 5px;
+    background-color: orange;
+    border-radius: var(--border-radius);
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background-color: orange;
+    color: #fff;
+    padding: 5px;
+    border-radius: var(--border-radius);
+    white-space: nowrap;
+    z-index: 1;
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.error_container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
