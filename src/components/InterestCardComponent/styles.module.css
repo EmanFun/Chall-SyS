@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    font-size: var(--font-medium-size);
+}
+
+.descriptions{
+    font-size: var(--font-base-size);
+}
