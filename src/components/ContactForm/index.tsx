@@ -1,15 +1,9 @@
 "use client";
 import React from "react";
 import styles from "./styles.module.css";
-import { useForm, Resolver } from "react-hook-form";
-
-type FormData = {
-  fullName: string;
-  email: string;
-  message: string;
-};
-
-const resolver: Resolver<FormData> = () => {};
+import { useForm } from "react-hook-form";
+import { FormData } from "@/@types/global";
+import { resolver } from "@/utils/validationsForm";
 
 function ContactForm() {
   const {
@@ -18,41 +12,47 @@ function ContactForm() {
     formState: { errors },
   } = useForm<FormData>({ resolver });
 
+  const onSubmit = handleSubmit((data) => console.log(data));
+
   return (
-    <form className={styles.container_from} action="">
+    <form className={styles.container_from} onSubmit={onSubmit}>
       <div className={styles.wrapper_input}>
         <label className={styles.input_label} htmlFor="">
           Full Name
         </label>
         <input
+        placeholder="Full Name"
           {...register("fullName")}
           className={styles.contact_input}
           type="text"
         />
-        {errors?.fullName && <p>{errors.fullName.message}</p>}
+        {errors?.fullName && <p className={styles.error}>{errors.fullName.message}</p>}
       </div>
       <div className={styles.wrapper_input}>
         <label className={styles.input_label} htmlFor="">
           Email
         </label>
         <input
+        placeholder="Email"
           {...register("email")}
           className={styles.contact_input}
           type="text"
         />
-        {errors?.email && <p>{errors.email.message}</p>}
+        {errors?.email && <p className={styles.error}>{errors.email.message}</p>}
       </div>
       <div className={styles.wrapper_input}>
         <label className={styles.input_label} htmlFor="">
           Message
         </label>
         <textarea
+        placeholder="Message"
           {...register("message")}
           className={styles.contact_text_input}
-          name=""
-          id=""
         ></textarea>
-        {errors?.message && <p>{errors.message.message}</p>}
+        {errors?.message && <p className={styles.error}>{errors.message.message}</p>}
+      </div>
+      <div className={styles.wrapper_input}>
+        <input type="submit" />
       </div>
     </form>
   );

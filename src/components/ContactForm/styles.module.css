@@ -2,14 +2,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: var(--max-width);
+    border-radius: var(--border-radius);
+    background-color: rgba(var(--callout-rgb),1);
+    border: 1px solid rgba(var(--callout-border-rgb), 0.8);
 }
 
 
 .wrapper_input{
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-direction: column;
+    gap: 0.5rem;
+    
 }
 
 .input_label{
@@ -17,10 +23,17 @@
 }
 
 .contact_input{
-
+    border-radius: var(--border-radius);
+    border: 1px solid black;
 }
 
 .contact_text_input{
     height: 120px;
     width: 250px;
+}
+.error{
+    text-transform: capitalize;
+    padding: 5px;
+    background-color: orange;
+    border-radius: var(--border-radius);
 }
