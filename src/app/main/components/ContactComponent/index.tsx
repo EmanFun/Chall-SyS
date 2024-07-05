@@ -2,9 +2,7 @@ import React from "react";
 import ContactForm from "@/components/ContactForm";
 import styles from "./styles.module.css";
 
-type Props = {};
-
-function ContactComponent({}: Props) {
+function ContactComponent() {
   return (
     <section className={styles.container}>
         <h1 className={styles.title}>Contact Form</h1>

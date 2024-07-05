@@ -1,18 +1,13 @@
 'use client';
-import { describe } from "node:test";
 import React from "react";
 import styles from "./styles.module.css";
 
 interface InterestCardProps {
     name: string;
-    img: string;
     description?: string;
 };
 
-function InterestCardComponent({name, img, description}: InterestCardProps) {
-    const [image, setImage] = useState<string>(img)
-
-
+function InterestCardComponent({name, description}: InterestCardProps) {
 
   return (
     <div className={styles.container}>

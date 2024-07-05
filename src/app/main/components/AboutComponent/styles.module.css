@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.about_message{
+    text-align: center;
+    width: 60%;
+    font-size: var(--font-base-size);
+}
