@@ -1,0 +1,17 @@
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.message{
+    padding: 2rem;
+    background-color: green;
+    border-radius: var(--border-radius);
+    background-color: rgba(var(--callout-rgb), 1);
+    border: 1px solid rgba(var(--callout-border-rgb), 0.8);
+    border: 1px solid;
+}
